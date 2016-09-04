@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
+		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
+		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
 		A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B686731D7BB95A003F29D0 /* AppDelegate.swift */; };
 		A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B686751D7BB95A003F29D0 /* ViewController.swift */; };
 		A4B686791D7BB95A003F29D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B686771D7BB95A003F29D0 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
+		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
+		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
 		A4B686701D7BB95A003F29D0 /* Ike's Love and Sandwiches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ike's Love and Sandwiches.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B686731D7BB95A003F29D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B686751D7BB95A003F29D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4B440201D7CC34C008340A7 /* food */ = {
+			isa = PBXGroup;
+			children = (
+				A4B440271D7CCD98008340A7 /* sandwiches */,
+				A4B440241D7CC5E5008340A7 /* add_ons */,
+				A4B440211D7CC383008340A7 /* PFoodItem.swift */,
+			);
+			name = food;
+			sourceTree = "<group>";
+		};
+		A4B440241D7CC5E5008340A7 /* add_ons */ = {
+			isa = PBXGroup;
+			children = (
+				A4B440251D7CC640008340A7 /* AddOn.swift */,
+			);
+			name = add_ons;
+			sourceTree = "<group>";
+		};
+		A4B440271D7CCD98008340A7 /* sandwiches */ = {
+			isa = PBXGroup;
+			children = (
+				A4B440281D7CCDE5008340A7 /* Sandwich.swift */,
+			);
+			name = sandwiches;
+			sourceTree = "<group>";
+		};
 		A4B686671D7BB95A003F29D0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +86,7 @@
 		A4B686721D7BB95A003F29D0 /* Ike's Love and Sandwiches */ = {
 			isa = PBXGroup;
 			children = (
+				A4B440201D7CC34C008340A7 /* food */,
 				A4B686731D7BB95A003F29D0 /* AppDelegate.swift */,
 				A4B686751D7BB95A003F29D0 /* ViewController.swift */,
 				A4B686771D7BB95A003F29D0 /* Main.storyboard */,
@@ -136,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B440261D7CC640008340A7 /* AddOn.swift in Sources */,
 				A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */,
+				A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
+				A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -240,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,6 +331,7 @@
 				A4B686841D7BB95A003F29D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
