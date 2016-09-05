@@ -6,19 +6,5 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-import Foundation
-
-class AddOn: PFoodItem {
-    var name: String {
-        return NSLocalizedString(internalName, comment: "")
-    }
-    
-    private(set) var price: Int
-    
-    private var internalName: String
-    
-    init(internalName: String, price: Int = 0) {
-        self.internalName = internalName
-        self.price = price
-    }
+class AddOn: FoodItem {
 }

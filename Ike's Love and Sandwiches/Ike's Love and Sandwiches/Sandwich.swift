@@ -7,16 +7,30 @@
 //
 
 class Sandwich: PFoodItem {
+    
     var name: String {
-        return NSLocalizedString(internalName, comment: "")
+        return base.name
     }
     
-    private(set) var price: Int
+    var price: Int {
+        var total = base.price
+        for ao in addOns {
+            total += ao.price
+        }
+        return total
+    }
     
-    private var internalName: String
+    private var base: SandwichBase
     
-    init(internalName: String, price: Int = 0) {
-        self.internalName = internalName
-        self.price = price
+    private var addOns: [AddOn]
+    
+    init(base: SandwichBase, addOns: [AddOn]) {
+        self.base = base
+        self.addOns = addOns
+    }
+    
+    convenience init(base: SandwichBase) {
+        let defaultAddOns = [AddOn]()
+        self.init(base: base, addOns: defaultAddOns)
     }
 }

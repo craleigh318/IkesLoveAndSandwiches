@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */; };
+		A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */; };
 		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
 		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
 		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandwichBase.swift; sourceTree = "<group>"; };
 		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
 		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 				A4B440271D7CCD98008340A7 /* sandwiches */,
 				A4B440241D7CC5E5008340A7 /* add_ons */,
 				A4B440211D7CC383008340A7 /* PFoodItem.swift */,
+				A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */,
 			);
 			name = food;
 			sourceTree = "<group>";
@@ -63,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B440281D7CCDE5008340A7 /* Sandwich.swift */,
+				A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */,
 			);
 			name = sandwiches;
 			sourceTree = "<group>";
@@ -169,10 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */,
 				A4B440261D7CC640008340A7 /* AddOn.swift in Sources */,
 				A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */,
 				A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
+				A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */,
 				A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
