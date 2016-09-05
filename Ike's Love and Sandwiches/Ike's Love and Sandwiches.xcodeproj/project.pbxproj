@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */; };
 		A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */; };
+		A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */; };
 		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
 		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
 		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandwichBase.swift; sourceTree = "<group>"; };
+		A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnsMenu.swift; sourceTree = "<group>"; };
 		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
 		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B440251D7CC640008340A7 /* AddOn.swift */,
+				A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */,
 			);
 			name = add_ons;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */,
 				A4B440261D7CC640008340A7 /* AddOn.swift in Sources */,
 				A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */,
+				A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */,
 				A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
 				A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */,

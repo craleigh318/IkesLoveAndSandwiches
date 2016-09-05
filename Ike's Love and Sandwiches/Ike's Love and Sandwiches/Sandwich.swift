@@ -7,7 +7,6 @@
 //
 
 class Sandwich: PFoodItem {
-    
     var name: String {
         return base.name
     }
