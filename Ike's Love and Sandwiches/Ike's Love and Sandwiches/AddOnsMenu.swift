@@ -55,4 +55,11 @@ class AddOnsMenu {
     private static let godFatherSauce = AddOn(internalName: "God Father Sauce", price: addOnHighPrice)
     private static let habaneroSauce = AddOn(internalName: "Habanero Sauce", price: addOnHighPrice)
     static let extraSauces = [bbqSauce, ranchSauce, pesto, honeyMustard, honeyMustard, italianSauce, blueCheese, marinaraSauce, frenchSauce, cranberrySauce, caesarSauce, honey, godFatherSauce, habaneroSauce]
+    
+    private static let mozzarellaSticks = AddOn(internalName: "Mozzarella Sticks", price: 292)
+    private static let jalapenoPoppers = AddOn(internalName: "Stuffed Jalapeño Poppers", price: 292)
+    private static let sticksAndPoppers = AddOn(internalName: "Mozzarella Sticks and Stuffed Jalapeño Poppers", price: 393)
+    private static let onionRings = AddOn(internalName: "Beer-Battered Onion Rings", price: 191)
+    private static let zucchini = AddOn(internalName: "Beer-Battered Zucchini", price: 191)
+    static let stuffings = [mozzarellaSticks, jalapenoPoppers, sticksAndPoppers, onionRings, zucchini]
 }
