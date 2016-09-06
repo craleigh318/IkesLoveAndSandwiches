@@ -21,15 +21,17 @@ class Sandwich: PFoodItem {
     
     private var base: SandwichBase
     
+    private var bread: Bread
+    
     private var addOns: [AddOn]
     
-    init(base: SandwichBase, addOns: [AddOn]) {
+    init(base: SandwichBase, bread: Bread, addOns: [AddOn]) {
         self.base = base
+        self.bread = bread
         self.addOns = addOns
     }
     
     convenience init(base: SandwichBase) {
-        let defaultAddOns = [AddOn]()
-        self.init(base: base, addOns: defaultAddOns)
+        self.init(base: base, bread: BreadMenu.defaultBread, addOns: AddOnsMenu.defaultAddOns)
     }
 }
