@@ -14,22 +14,22 @@ class AddOnsMenu {
     private static let dirtySauce = AddOn(internalName: "Dirty Sauce", price: freeAddOnPrice)
     private static let lettuce = AddOn(internalName: "Lettuce", price: freeAddOnPrice)
     private static let tomatoes = AddOn(internalName: "Tomatoes", price: freeAddOnPrice)
-    static let defaultAddOns = [dirtySauce, lettuce, tomatoes]
+    static let defaultAddOns = AddOnsSubmenu(internalName: "Comes with", addOns: [dirtySauce, lettuce, tomatoes])
     
     private static let redOnions = AddOn(internalName: "Red Onions", price: freeAddOnPrice)
     private static let pickles = AddOn(internalName: "Pickles", price: freeAddOnPrice)
     private static let bananaPeppers = AddOn(internalName: "Banana Peppers", price: freeAddOnPrice)
     private static let jalapenos = AddOn(internalName: "Jalapeños", price: freeAddOnPrice)
     private static let mustard = AddOn(internalName: "Mustard", price: freeAddOnPrice)
-    static let freeAddOns = [redOnions, pickles, bananaPeppers, jalapenos, mustard]
+    static let freeAddOns = AddOnsSubmenu(internalName: "Free upon Request", addOns: [redOnions, pickles, bananaPeppers, jalapenos, mustard])
     
     private static let avocados = AddOn(internalName: "Avocados", price: addOnHighPrice)
     private static let bacon = AddOn(internalName: "Bacon", price: addOnHighPrice)
     private static let grilledMustrooms = AddOn(internalName: "Grilled Mustrooms", price: 191)
     private static let extraMeat = AddOn(internalName: "Extra Meat", price: 292)
     private static let cucumbers = AddOn(internalName: "Cucumbers", price: 99)
-    private static let halalChickenSubstitute = AddOn(internalName: "Substitute Fried Chicken for Halal Chicken", price: addOnHighPrice)
-    static let paidAddOns = [avocados, bacon, grilledMustrooms, extraMeat, cucumbers, halalChickenSubstitute]
+    private static let halalChickenSubstitute = AddOn(internalName: "Substitute Fried Chicken for Halāl Chicken", price: addOnHighPrice)
+    static let paidAddOns = AddOnsSubmenu(internalName: "Add-Ons", addOns: [avocados, bacon, grilledMustrooms, extraMeat, cucumbers, halalChickenSubstitute])
     
     private static let americanCheese = AddOn(internalName: "American", price: addOnNormalPrice)
     private static let jackCheese = AddOn(internalName: "Jack", price: addOnNormalPrice)
@@ -39,7 +39,7 @@ class AddOnsMenu {
     private static let cheddarCheese = AddOn(internalName: "Cheddar", price: addOnNormalPrice)
     private static let havartiCheese = AddOn(internalName: "Havarti", price: addOnNormalPrice)
     private static let creamCheese = AddOn(internalName: "Cream Cheese", price: addOnNormalPrice)
-    static let extraCheeses = [americanCheese, jackCheese, pepperJackCheese, swissCheese, provoloneCheese, cheddarCheese, havartiCheese, creamCheese]
+    static let extraCheeses = AddOnsSubmenu(internalName: "Extra Cheese", addOns: [americanCheese, jackCheese, pepperJackCheese, swissCheese, provoloneCheese, cheddarCheese, havartiCheese, creamCheese])
     
     private static let bbqSauce = AddOn(internalName: "BBQ", price: addOnNormalPrice)
     private static let ranchSauce = AddOn(internalName: "Ranch", price: addOnNormalPrice)
@@ -50,16 +50,16 @@ class AddOnsMenu {
     private static let marinaraSauce = AddOn(internalName: "Marinara", price: addOnNormalPrice)
     private static let frenchSauce = AddOn(internalName: "French Sauce", price: addOnNormalPrice)
     private static let cranberrySauce = AddOn(internalName: "Cranberry Sauce", price: addOnNormalPrice)
-    private static let caesarSauce = AddOn(internalName: "Cæsar", price: addOnNormalPrice)
+    private static let caesarSauce = AddOn(internalName: "Caesar", price: addOnNormalPrice)
     private static let honey = AddOn(internalName: "Real Honey", price: addOnHighPrice)
     private static let godFatherSauce = AddOn(internalName: "God Father Sauce", price: addOnHighPrice)
     private static let habaneroSauce = AddOn(internalName: "Habanero Sauce", price: addOnHighPrice)
-    static let extraSauces = [bbqSauce, ranchSauce, pesto, honeyMustard, honeyMustard, italianSauce, blueCheese, marinaraSauce, frenchSauce, cranberrySauce, caesarSauce, honey, godFatherSauce, habaneroSauce]
+    static let extraSauces = AddOnsSubmenu(internalName: "Extra Sauce", addOns: [bbqSauce, ranchSauce, pesto, honeyMustard, honeyMustard, italianSauce, blueCheese, marinaraSauce, frenchSauce, cranberrySauce, caesarSauce, honey, godFatherSauce, habaneroSauce])
     
     private static let mozzarellaSticks = AddOn(internalName: "Mozzarella Sticks", price: 292)
     private static let jalapenoPoppers = AddOn(internalName: "Stuffed Jalapeño Poppers", price: 292)
     private static let sticksAndPoppers = AddOn(internalName: "Mozzarella Sticks and Stuffed Jalapeño Poppers", price: 393)
     private static let onionRings = AddOn(internalName: "Beer-Battered Onion Rings", price: 191)
     private static let zucchini = AddOn(internalName: "Beer-Battered Zucchini", price: 191)
-    static let stuffings = [mozzarellaSticks, jalapenoPoppers, sticksAndPoppers, onionRings, zucchini]
+    static let stuffings = AddOnsSubmenu(internalName: "Feeling Extra Dirty?", addOns: [mozzarellaSticks, jalapenoPoppers, sticksAndPoppers, onionRings, zucchini])
 }

@@ -8,17 +8,11 @@
 
 import Foundation
 
-class FoodItem: PFoodItem {
-    var name: String {
-        return NSLocalizedString(internalName, comment: "")
-    }
-    
+class FoodItem: InternalNameObject, PFoodItem {
     private(set) var price: Int
     
-    private var internalName: String
-    
     init(internalName: String, price: Int = 0) {
-        self.internalName = internalName
         self.price = price
+        super.init(internalName: internalName)
     }
 }
