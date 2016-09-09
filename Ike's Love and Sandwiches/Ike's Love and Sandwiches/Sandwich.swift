@@ -32,6 +32,17 @@ class Sandwich: PFoodItem {
     }
     
     convenience init(base: SandwichBase) {
-        self.init(base: base, bread: BreadMenu.defaultBread, addOns: AddOnsMenu.defaultAddOns)
+        let toppings = AddOnsMenu.defaultAddOns.getAddOns()
+        self.init(base: base, bread: BreadMenu.defaultBread, addOns: toppings)
+    }
+    
+    func receiptPrint() -> String {
+        let basePrint = base.receiptPrint()
+        var print = "\(basePrint)\n"
+        for ao in addOns {
+            let addOnPrint = ao.receiptPrint()
+            print += "— \(addOnPrint)\n"
+        }
+        return print
     }
 }

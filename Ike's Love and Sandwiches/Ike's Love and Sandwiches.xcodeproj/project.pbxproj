@@ -12,6 +12,8 @@
 		A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */; };
 		A47149161D7E380F00138952 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47149151D7E380F00138952 /* Bread.swift */; };
 		A47149191D7E394200138952 /* BreadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47149181D7E394200138952 /* BreadMenu.swift */; };
+		A496CD011D8232C10041C376 /* PReceiptPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496CD001D8232C10041C376 /* PReceiptPrintable.swift */; };
+		A496CD031D8233690041C376 /* IkesOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496CD021D8233690041C376 /* IkesOrder.swift */; };
 		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
 		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
 		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
@@ -30,6 +32,8 @@
 		A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnsMenu.swift; sourceTree = "<group>"; };
 		A47149151D7E380F00138952 /* Bread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
 		A47149181D7E394200138952 /* BreadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadMenu.swift; sourceTree = "<group>"; };
+		A496CD001D8232C10041C376 /* PReceiptPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PReceiptPrintable.swift; sourceTree = "<group>"; };
+		A496CD021D8233690041C376 /* IkesOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesOrder.swift; sourceTree = "<group>"; };
 		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
 		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A496CCFF1D8232AE0041C376 /* orders */ = {
+			isa = PBXGroup;
+			children = (
+				A496CD001D8232C10041C376 /* PReceiptPrintable.swift */,
+				A496CD021D8233690041C376 /* IkesOrder.swift */,
+			);
+			name = orders;
+			sourceTree = "<group>";
+		};
 		A4B440201D7CC34C008340A7 /* food */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 		A4B686721D7BB95A003F29D0 /* Ike's Love and Sandwiches */ = {
 			isa = PBXGroup;
 			children = (
+				A496CCFF1D8232AE0041C376 /* orders */,
 				A4B440201D7CC34C008340A7 /* food */,
 				A4B686731D7BB95A003F29D0 /* AppDelegate.swift */,
 				A4B686751D7BB95A003F29D0 /* ViewController.swift */,
@@ -190,11 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A496CD031D8233690041C376 /* IkesOrder.swift in Sources */,
 				A4D901501D8107A700CB98E8 /* InternalNameObject.swift in Sources */,
 				A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */,
 				A4B440261D7CC640008340A7 /* AddOn.swift in Sources */,
 				A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */,
 				A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */,
+				A496CD011D8232C10041C376 /* PReceiptPrintable.swift in Sources */,
 				A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
 				A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */,

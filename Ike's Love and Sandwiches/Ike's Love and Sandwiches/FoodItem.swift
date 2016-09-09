@@ -15,4 +15,9 @@ class FoodItem: InternalNameObject, PFoodItem {
         self.price = price
         super.init(internalName: internalName)
     }
+    
+    func receiptPrint() -> String {
+        let formattedPrice = IkesOrder.formatPrice(price)
+        return "\(name)\t\(formattedPrice)"
+    }
 }

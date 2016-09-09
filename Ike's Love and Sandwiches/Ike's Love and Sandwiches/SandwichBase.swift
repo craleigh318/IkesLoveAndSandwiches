@@ -7,10 +7,19 @@
 //
 
 class SandwichBase: FoodItem {
-    private var number: String
+    private var number: String?
     
-    init(number: String, internalName: String, price: Int) {
+    init(number: String?, internalName: String, price: Int) {
         self.number = number
         super.init(internalName: internalName, price: price)
+    }
+    
+    override func receiptPrint() -> String {
+        var print = ""
+        if let unwrappedNumber = number {
+            print += "\(unwrappedNumber). "
+        }
+        print += super.receiptPrint()
+        return print
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-protocol PFoodItem {
+protocol PFoodItem: PReceiptPrintable {
     var name: String {get}
     var price: Int {get}
 }
