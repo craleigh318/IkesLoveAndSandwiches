@@ -15,6 +15,9 @@
 		A45DA6FE1D83857D0068A441 /* PReceiptPrintableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA6FD1D83857D0068A441 /* PReceiptPrintableRow.swift */; };
 		A45DA7001D83920C0068A441 /* SandwichesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA6FF1D83920C0068A441 /* SandwichesMenu.swift */; };
 		A45DA7031D8397520068A441 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA7021D8397520068A441 /* Localization.swift */; };
+		A45DA7061D83C20B0068A441 /* IkesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA7051D83C20B0068A441 /* IkesTableViewCell.swift */; };
+		A45DA7081D83C2A10068A441 /* PCellSelectListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA7071D83C2A10068A441 /* PCellSelectListener.swift */; };
+		A45DA70A1D83C2E00068A441 /* PCellStateChangedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45DA7091D83C2DF0068A441 /* PCellStateChangedListener.swift */; };
 		A47149161D7E380F00138952 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47149151D7E380F00138952 /* Bread.swift */; };
 		A47149191D7E394200138952 /* BreadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47149181D7E394200138952 /* BreadMenu.swift */; };
 		A496CD011D8232C10041C376 /* PReceiptPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496CD001D8232C10041C376 /* PReceiptPrintable.swift */; };
@@ -40,6 +43,9 @@
 		A45DA6FD1D83857D0068A441 /* PReceiptPrintableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PReceiptPrintableRow.swift; sourceTree = "<group>"; };
 		A45DA6FF1D83920C0068A441 /* SandwichesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandwichesMenu.swift; sourceTree = "<group>"; };
 		A45DA7021D8397520068A441 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		A45DA7051D83C20B0068A441 /* IkesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesTableViewCell.swift; sourceTree = "<group>"; };
+		A45DA7071D83C2A10068A441 /* PCellSelectListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCellSelectListener.swift; sourceTree = "<group>"; };
+		A45DA7091D83C2DF0068A441 /* PCellStateChangedListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCellStateChangedListener.swift; sourceTree = "<group>"; };
 		A47149151D7E380F00138952 /* Bread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
 		A47149181D7E394200138952 /* BreadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadMenu.swift; sourceTree = "<group>"; };
 		A496CD001D8232C10041C376 /* PReceiptPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PReceiptPrintable.swift; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 				A45DA7021D8397520068A441 /* Localization.swift */,
 			);
 			name = localization;
+			sourceTree = "<group>";
+		};
+		A45DA7041D83C05F0068A441 /* view_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A45DA7051D83C20B0068A441 /* IkesTableViewCell.swift */,
+				A45DA7071D83C2A10068A441 /* PCellSelectListener.swift */,
+				A45DA7091D83C2DF0068A441 /* PCellStateChangedListener.swift */,
+			);
+			name = view_controllers;
 			sourceTree = "<group>";
 		};
 		A496CCFF1D8232AE0041C376 /* orders */ = {
@@ -142,6 +158,7 @@
 		A4B686721D7BB95A003F29D0 /* Ike's Love and Sandwiches */ = {
 			isa = PBXGroup;
 			children = (
+				A45DA7041D83C05F0068A441 /* view_controllers */,
 				A45DA7011D8397410068A441 /* localization */,
 				A496CCFF1D8232AE0041C376 /* orders */,
 				A4B440201D7CC34C008340A7 /* food */,
@@ -237,6 +254,7 @@
 				A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */,
 				A496CD011D8232C10041C376 /* PReceiptPrintable.swift in Sources */,
 				A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */,
+				A45DA7081D83C2A10068A441 /* PCellSelectListener.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
 				A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */,
 				A45DA7001D83920C0068A441 /* SandwichesMenu.swift in Sources */,
@@ -244,6 +262,8 @@
 				A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */,
 				A4D9014E1D8106CE00CB98E8 /* AddOnsSubmenu.swift in Sources */,
 				A45DA6FA1D8379940068A441 /* IkesOrderRow.swift in Sources */,
+				A45DA7061D83C20B0068A441 /* IkesTableViewCell.swift in Sources */,
+				A45DA70A1D83C2E00068A441 /* PCellStateChangedListener.swift in Sources */,
 				A47149191D7E394200138952 /* BreadMenu.swift in Sources */,
 				A45DA6FC1D837C5D0068A441 /* IkesOrderTable.swift in Sources */,
 			);

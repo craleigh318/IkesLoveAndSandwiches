@@ -25,7 +25,7 @@ class Sandwich: PFoodItem {
     
     private var addOns: [AddOn]
     
-    init(base: SandwichBase, bread: Bread, addOns: [AddOn]) {
+    private init(base: SandwichBase, bread: Bread, addOns: [AddOn]) {
         self.base = base
         self.bread = bread
         self.addOns = addOns
