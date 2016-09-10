@@ -29,7 +29,7 @@ class AddOnsMenu {
     private static let extraMeat = AddOn(internalName: "Extra Meat", price: 292)
     private static let cucumbers = AddOn(internalName: "Cucumbers", price: 99)
     private static let halalChickenSubstitute = AddOn(internalName: "Substitute Fried Chicken for Halāl Chicken", price: addOnHighPrice)
-    static let paidAddOns = AddOnsSubmenu(internalName: "Add-Ons", addOns: [avocados, bacon, grilledMustrooms, extraMeat, cucumbers, halalChickenSubstitute])
+    private static let paidAddOns = AddOnsSubmenu(internalName: "Add-Ons", addOns: [avocados, bacon, grilledMustrooms, extraMeat, cucumbers, halalChickenSubstitute])
     
     private static let americanCheese = AddOn(internalName: "American", price: addOnNormalPrice)
     private static let jackCheese = AddOn(internalName: "Jack", price: addOnNormalPrice)
@@ -39,7 +39,7 @@ class AddOnsMenu {
     private static let cheddarCheese = AddOn(internalName: "Cheddar", price: addOnNormalPrice)
     private static let havartiCheese = AddOn(internalName: "Havarti", price: addOnNormalPrice)
     private static let creamCheese = AddOn(internalName: "Cream Cheese", price: addOnNormalPrice)
-    static let extraCheeses = AddOnsSubmenu(internalName: "Extra Cheese", addOns: [americanCheese, jackCheese, pepperJackCheese, swissCheese, provoloneCheese, cheddarCheese, havartiCheese, creamCheese])
+    private static let extraCheeses = AddOnsSubmenu(internalName: "Extra Cheese", addOns: [americanCheese, jackCheese, pepperJackCheese, swissCheese, provoloneCheese, cheddarCheese, havartiCheese, creamCheese])
     
     private static let bbqSauce = AddOn(internalName: "BBQ", price: addOnNormalPrice)
     private static let ranchSauce = AddOn(internalName: "Ranch", price: addOnNormalPrice)
@@ -61,5 +61,7 @@ class AddOnsMenu {
     private static let sticksAndPoppers = AddOn(internalName: "Mozzarella Sticks and Stuffed Jalapeño Poppers", price: 393)
     private static let onionRings = AddOn(internalName: "Beer-Battered Onion Rings", price: 191)
     private static let zucchini = AddOn(internalName: "Beer-Battered Zucchini", price: 191)
-    static let stuffings = AddOnsSubmenu(internalName: "Feeling Extra Dirty?", addOns: [mozzarellaSticks, jalapenoPoppers, sticksAndPoppers, onionRings, zucchini])
+    private static let stuffings = AddOnsSubmenu(internalName: "Feeling Extra Dirty?", addOns: [mozzarellaSticks, jalapenoPoppers, sticksAndPoppers, onionRings, zucchini])
+    
+    static let submenus = [defaultAddOns, freeAddOns, paidAddOns, extraCheeses, extraSauces, stuffings]
 }

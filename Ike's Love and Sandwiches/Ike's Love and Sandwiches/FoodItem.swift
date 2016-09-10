@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FoodItem: InternalNameObject, PFoodItem {
+class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow {
     private(set) var price: Int
     
     init(internalName: String, price: Int = 0) {
@@ -16,8 +16,12 @@ class FoodItem: InternalNameObject, PFoodItem {
         super.init(internalName: internalName)
     }
     
-    func receiptPrint() -> String {
+    func receiptPrintRow() -> IkesOrderRow {
         let formattedPrice = IkesOrder.formatPrice(price)
-        return "\(name)\t\(formattedPrice)"
+        return IkesOrderRow(leftCell: name, rightCell: "\(formattedPrice)")
+    }
+    
+    func receiptPrint() -> IkesOrderTable {
+        return IkesOrderTable(rows: [receiptPrintRow()])
     }
 }

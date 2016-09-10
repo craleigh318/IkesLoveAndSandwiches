@@ -7,5 +7,5 @@
 //
 
 protocol PReceiptPrintable {
-    func receiptPrint() -> String
+    func receiptPrint() -> IkesOrderTable
 }

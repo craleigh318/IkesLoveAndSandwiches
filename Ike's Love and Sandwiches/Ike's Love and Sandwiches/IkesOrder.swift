@@ -22,9 +22,11 @@ class IkesOrder: PReceiptPrintable {
     init() {
     }
     
-    func receiptPrint() -> String {
+    func receiptPrint() -> IkesOrderTable {
+        let table = IkesOrderTable()
         for itm in items {
-            
+            table.rows += itm.receiptPrint().rows
         }
+        return table
     }
 }

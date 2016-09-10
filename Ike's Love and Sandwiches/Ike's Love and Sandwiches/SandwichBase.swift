@@ -14,12 +14,11 @@ class SandwichBase: FoodItem {
         super.init(internalName: internalName, price: price)
     }
     
-    override func receiptPrint() -> String {
-        var print = ""
+    override func receiptPrintRow() -> IkesOrderRow {
+        let print = super.receiptPrintRow()
         if let unwrappedNumber = number {
-            print += "\(unwrappedNumber). "
+            print.leftCell = "\(unwrappedNumber). \(print.leftCell)"
         }
-        print += super.receiptPrint()
         return print
     }
 }

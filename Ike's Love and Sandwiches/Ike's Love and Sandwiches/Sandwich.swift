@@ -36,12 +36,12 @@ class Sandwich: PFoodItem {
         self.init(base: base, bread: BreadMenu.defaultBread, addOns: toppings)
     }
     
-    func receiptPrint() -> String {
-        let basePrint = base.receiptPrint()
-        var print = "\(basePrint)\n"
+    func receiptPrint() -> IkesOrderTable {
+        let print = base.receiptPrint()
         for ao in addOns {
-            let addOnPrint = ao.receiptPrint()
-            print += "— \(addOnPrint)\n"
+            let addOnPrint = ao.receiptPrintRow()
+            addOnPrint.leftCell = "— \(addOnPrint.leftCell)"
+            print.rows.append(addOnPrint)
         }
         return print
     }
