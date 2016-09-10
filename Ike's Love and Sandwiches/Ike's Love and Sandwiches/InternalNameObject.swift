@@ -6,11 +6,9 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-import Foundation
-
 class InternalNameObject {
     var name: String {
-        return NSLocalizedString(internalName, comment: "")
+        return Localization.localizeString(internalName)
     }
     
     private var internalName: String

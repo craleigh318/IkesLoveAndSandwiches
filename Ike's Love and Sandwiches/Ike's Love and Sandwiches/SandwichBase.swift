@@ -7,10 +7,21 @@
 //
 
 class SandwichBase: FoodItem {
+    var description: String? {
+        var des: String?
+        if let inDes = internalDescription {
+            des = Localization.localizeString(inDes)
+        }
+        return des
+    }
+    
     private var number: String?
     
-    init(number: String?, internalName: String, price: Int) {
+    private var internalDescription: String?
+    
+    init(number: String?, internalName: String, price: Int, internalDescription: String?) {
         self.number = number
+        self.internalDescription = internalDescription
         super.init(internalName: internalName, price: price)
     }
     
@@ -19,6 +30,7 @@ class SandwichBase: FoodItem {
         if let unwrappedNumber = number {
             print.leftCell = "\(unwrappedNumber). \(print.leftCell)"
         }
+        print.bottomCell = description
         return print
     }
 }

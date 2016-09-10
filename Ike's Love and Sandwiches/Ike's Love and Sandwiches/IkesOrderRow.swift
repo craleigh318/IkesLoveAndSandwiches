@@ -11,8 +11,11 @@ class IkesOrderRow {
     
     var rightCell: String
     
-    init(leftCell: String = "", rightCell: String = "") {
+    var bottomCell: String?
+    
+    init(leftCell: String = "", rightCell: String = "", bottomCell: String?) {
         self.leftCell = leftCell
         self.rightCell = rightCell
+        self.bottomCell = bottomCell
     }
 }

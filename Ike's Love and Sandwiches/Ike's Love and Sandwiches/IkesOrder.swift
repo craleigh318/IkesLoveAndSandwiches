@@ -17,7 +17,7 @@ class IkesOrder: PReceiptPrintable {
         return formatter.stringFromNumber(priceInDollars)
     }
     
-    var items: [FoodItem] = []
+    var items: [PFoodItem] = []
     
     init() {
     }
