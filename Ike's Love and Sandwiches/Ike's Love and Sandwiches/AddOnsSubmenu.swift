@@ -7,14 +7,14 @@
 //
 
 class AddOnsSubmenu: InternalNameObject {
-    private var addOns: [AddOn]
+    private var addOns: Set<AddOn>
     
-    init(internalName: String, addOns: [AddOn]) {
+    init(internalName: String, addOns: Set<AddOn>) {
         self.addOns = addOns
         super.init(internalName: internalName)
     }
     
-    func getAddOns() -> [AddOn] {
-        return [AddOn](addOns)
+    func getAddOns() -> Set<AddOn> {
+        return Set<AddOn>(addOns)
     }
 }

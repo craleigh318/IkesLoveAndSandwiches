@@ -8,10 +8,13 @@
 
 import Foundation
 
-class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow {
+class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow, Hashable {
+    var hashValue: Int
+    
     private(set) var price: Int
     
     init(internalName: String, price: Int = 0) {
+        hashValue = Hashing.getNextHashValue()
         self.price = price
         super.init(internalName: internalName)
     }
@@ -24,4 +27,8 @@ class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow {
     func receiptPrint() -> IkesOrderTable {
         return IkesOrderTable(rows: [receiptPrintRow()])
     }
+}
+
+func ==(lhs: FoodItem, rhs: FoodItem) -> Bool {
+    return lhs.hashValue == rhs.hashValue
 }
