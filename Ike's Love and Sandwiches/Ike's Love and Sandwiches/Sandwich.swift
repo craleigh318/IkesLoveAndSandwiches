@@ -23,17 +23,13 @@ class Sandwich: PFoodItem {
     
     private var bread: Bread
     
-    private var addOns: [AddOn]
+    private var addOns: Set<AddOn>
     
-    private init(base: SandwichBase, bread: Bread, addOns: [AddOn]) {
+    private init(base: SandwichBase, bread: Bread = BreadMenu.defaultBread,
+                 addOns: Set<AddOn> = AddOnsMenu.defaultAddOns.getAddOns()) {
         self.base = base
         self.bread = bread
         self.addOns = addOns
-    }
-    
-    convenience init(base: SandwichBase) {
-        let toppings = AddOnsMenu.defaultAddOns.getAddOns()
-        self.init(base: base, bread: BreadMenu.defaultBread, addOns: toppings)
     }
     
     func receiptPrint() -> IkesOrderTable {

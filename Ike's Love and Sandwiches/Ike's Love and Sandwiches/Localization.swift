@@ -12,4 +12,14 @@ class Localization {
     static func localizeString(internalString: String) -> String {
         return NSLocalizedString(internalString, comment: "")
     }
+    
+    static func localizeOptionalString(internalString: String?) -> String? {
+        var ret: String?
+        if let intStr = internalString {
+            ret = localizeString(intStr)
+        } else {
+            ret = nil
+        }
+        return ret
+    }
 }

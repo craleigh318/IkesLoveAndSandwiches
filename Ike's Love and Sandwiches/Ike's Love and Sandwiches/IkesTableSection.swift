@@ -8,13 +8,18 @@
 
 import UIKit
 
-class IkesTableSection: InternalNameObject {
-    private(set)
+class IkesTableSection {
+    var name: String? {
+        return Localization.localizeOptionalString(internalName)
+    }
+    
+    private var internalName: String?
+    
     private var rows: [UITableViewCell]
     
     init (internalName: String, rows: [UITableViewCell]) {
+        self.internalName = internalName
         self.rows = rows
-        super.init(internalName: internalName)
     }
     
     func getNumRows() -> Int {
