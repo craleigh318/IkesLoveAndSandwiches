@@ -10,7 +10,7 @@ import UIKit
 
 class IkesTableSection {
     var name: String? {
-        return Localization.localizeOptionalString(internalName)
+        return Localization.localizeOptionalString(internalString: internalName)
     }
     
     private var internalName: String?

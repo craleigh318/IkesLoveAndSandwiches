@@ -49,7 +49,7 @@ class IkesTableViewCell {
     
     private func stateChanged() {
         if let scl = stateChangedListener {
-            scl.cellStateChanged(self)
+            scl.cellStateChanged(sender: self)
         }
     }
 }

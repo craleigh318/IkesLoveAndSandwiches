@@ -9,27 +9,29 @@
 class SandwichCustomizer {
     private static func submenuToBox(sub: AddOnsSubmenu) -> AddOnsBox {
         let boxTitle = sub.name
-        var boxItems = [SelectableAddOn]()
-        for ao in sub.getAddOns() {
-            let sao = SelectableAddOn(addOn: ao)
-            boxItems.append(sao)
-        }
-        return AddOnsBox(internalTitle: boxTitle, addOns: boxItems)
+        let menuAddOns = Array(sub.getAddOns())
+        return AddOnsBox(internalTitle: boxTitle, addOns: menuAddOns)
     }
     
-    private(set) var baseSandwich: SandwichBase
+    private(set) var sandwich: Sandwich
     
-    private(set) var boxes: [FoodComponentBox] = {
-        var bxs = [FoodComponentBox]()
-        bxs.append(BreadBox.box)
-        for sub in AddOnsMenu.submenus {
-            let newBox = SandwichCustomizer.submenuToBox(sub: sub)
-            bxs.append(newBox)
-        }
-        return bxs
-    }()
+    private(set) var boxes: [FoodComponentBox] = []
     
     init(baseSandwich: SandwichBase) {
-        self.baseSandwich = baseSandwich
+        sandwich = Sandwich(base: baseSandwich)
+    }
+    
+    private func initializeBoxes() {
+        var bxFs = [FoodComponentBoxFactory]()
+        bxFs.append(BreadBox.box)
+        for sub in AddOnsMenu.submenus {
+            let newBox = SandwichCustomizer.submenuToBox(sub: sub)
+            bxFs.append(newBox)
+        }
+        boxes = [FoodComponentBox]()
+        for bf in bxFs {
+            let box = bf.makeFoodComponentBox(sandwich: sandwich)
+            boxes.append(box)
+        }
     }
 }

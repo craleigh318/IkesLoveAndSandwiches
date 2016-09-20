@@ -25,7 +25,7 @@ class Sandwich: PFoodItem {
     
     private(set) var addOns: Set<AddOn>
     
-    private init(base: SandwichBase, bread: Bread = BreadMenu.defaultBread,
+    init(base: SandwichBase, bread: Bread = BreadMenu.defaultBread,
                  addOns: Set<AddOn> = AddOnsMenu.defaultAddOns.getAddOns()) {
         self.base = base
         self.bread = bread
