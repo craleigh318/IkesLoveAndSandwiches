@@ -41,4 +41,14 @@ class Sandwich: PFoodItem {
         }
         return print
     }
+    
+    func contains(subItem: PFoodItem) -> Bool {
+        var containsSubItem = false
+        if let b = subItem as? Bread {
+            containsSubItem = (b == bread)
+        } else if let ao = subItem as? AddOn {
+            containsSubItem = addOns.contains(ao)
+        }
+        return containsSubItem
+    }
 }

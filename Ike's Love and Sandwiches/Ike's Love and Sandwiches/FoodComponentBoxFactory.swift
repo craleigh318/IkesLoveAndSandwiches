@@ -9,8 +9,11 @@
 class FoodComponentBoxFactory: PFoodComponentBoxFactory {
     private var internalTitle: String?
     
-    init(internalTitle: String?) {
+    private var items: [PFoodItem]
+    
+    init(internalTitle: String? = nil, items: [PFoodItem]) {
         self.internalTitle = internalTitle
+        self.items = items
     }
     
     func makeFoodComponentBox(sandwich: Sandwich) -> FoodComponentBox {
@@ -27,6 +30,12 @@ class FoodComponentBoxFactory: PFoodComponentBoxFactory {
     }
     
     func getSelectableFoodItems(sandwich: Sandwich) -> [SelectableFoodItem] {
-        return []
+        var selFoodItems = [SelectableFoodItem]()
+        for itm in items {
+            let hasItem = sandwich.contains(subItem: itm)
+            let si = SelectableFoodItem(foodItem: itm, selected: hasItem)
+            selFoodItems.append(si)
+        }
+        return selFoodItems
     }
 }

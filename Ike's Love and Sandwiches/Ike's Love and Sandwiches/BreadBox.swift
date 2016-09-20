@@ -12,22 +12,10 @@ class BreadBox: FoodComponentBoxFactory {
     private static let thisInternalTitle = "Bread"
     
     private init() {
-        super.init(internalTitle: BreadBox.thisInternalTitle)
+        super.init(internalTitle: BreadBox.thisInternalTitle, items: BreadMenu.breads)
     }
     
     override func getDetail(sandwich: Sandwich) -> String? {
         return sandwich.bread.name
-    }
-    
-    override func getSelectableFoodItems(sandwich: Sandwich) -> [SelectableFoodItem] {
-        var selFoodItems = super.getSelectableFoodItems(sandwich: sandwich)
-        let thisBread = sandwich.bread
-        let breadMenu = BreadMenu.breads
-        for b in breadMenu {
-            let hasBread = (b == thisBread)
-            let sao = SelectableFoodItem(foodItem: b, selected: hasBread)
-            selFoodItems.append(sao)
-        }
-        return selFoodItems
     }
 }
