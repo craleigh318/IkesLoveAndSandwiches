@@ -9,24 +9,19 @@
 import UIKit
 
 class FoodComponentBox {
-    var title: String? {
-        return Localization.localizeOptionalString(internalTitle)
+    static func selectableAddOnsToDataSource(selectableAddOns: [SelectableAddOn]) -> UITableViewDataSource? {
+        return nil
     }
     
-    var detail: String? {
-        return Localization.localizeOptionalString(internalDetail)
-    }
+    private(set) var internalTitle: String?
     
-    private var internalTitle: String?
+    private(set) var internalDetail: String?
     
-    private var internalDetail: String?
+    private(set) var contents: UITableViewDataSource
     
-    init(internalTitle: String? = nil, internalDetail: String? = nil) {
-        self.internalTitle = internalTitle
-        self.internalDetail = internalDetail
-    }
-    
-    func getSelectableAddOns(sandwich: Sandwich) -> [SelectabeAddOn] {
-        return []
+    init(title: String? = nil, detail: String? = nil, contents: UITableViewDataSource? = nil) {
+        self.title = title
+        self.detail = detail
+        self.contents = contents
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class IkesTableViewCell {
-    var style: UITableViewCellStyle = .Default
+    var style: UITableViewCellStyle = .default
     
     var text: String? {
         didSet {
@@ -42,7 +42,7 @@ class IkesTableViewCell {
             dtl.text = detailText
         }
         if checkmarked {
-            newCell.accessoryType = .Checkmark
+            newCell.accessoryType = .checkmark
         }
         return newCell
     }

@@ -9,7 +9,7 @@
 class Observable<T> {
     weak var listener: PObserver?
     
-    init(listener: PObserver<T>?) {
+    init(listener: PObserver) {
         self.listener = listener
     }
 }

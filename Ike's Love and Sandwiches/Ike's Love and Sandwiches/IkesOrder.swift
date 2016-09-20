@@ -10,11 +10,11 @@ import Foundation
 
 class IkesOrder: PReceiptPrintable {
     static func formatPrice(price: Int) -> String? {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .CurrencyStyle
-        formatter.locale = NSLocale(localeIdentifier: "en_US")
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "en_US")
         let priceInDollars = Double(price) / 100.0
-        return formatter.stringFromNumber(priceInDollars)
+        return formatter.string(from: NSNumber(priceInDollars))
     }
     
     var items: [PFoodItem] = []

@@ -33,6 +33,6 @@ class AddOnsBox: FoodComponentBox {
     
     init(internalTitle: String? = nil, addOns: [SelectableAddOn]) {
         self.addOns = addOns
-        super.init(internalTitle: internalTitle, contents: nil)
+        super.init(internalTitle: internalTitle)
     }
 }

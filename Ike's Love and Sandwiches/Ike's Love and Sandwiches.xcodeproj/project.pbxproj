@@ -32,6 +32,7 @@
 		A47149191D7E394200138952 /* BreadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47149181D7E394200138952 /* BreadMenu.swift */; };
 		A496CD011D8232C10041C376 /* PReceiptPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496CD001D8232C10041C376 /* PReceiptPrintable.swift */; };
 		A496CD031D8233690041C376 /* IkesOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496CD021D8233690041C376 /* IkesOrder.swift */; };
+		A49D99B81D90E453008EA161 /* PFoodComponentBoxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */; };
 		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
 		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
 		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
@@ -71,6 +72,7 @@
 		A47149181D7E394200138952 /* BreadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadMenu.swift; sourceTree = "<group>"; };
 		A496CD001D8232C10041C376 /* PReceiptPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PReceiptPrintable.swift; sourceTree = "<group>"; };
 		A496CD021D8233690041C376 /* IkesOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesOrder.swift; sourceTree = "<group>"; };
+		A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodComponentBoxFactory.swift; sourceTree = "<group>"; };
 		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
 		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A40CB0711D8A1F3F00530153 /* FoodComponentBox.swift */,
 				A40CB0731D8A381400530153 /* BreadBox.swift */,
 				A40CB0771D8A3D1A00530153 /* SandwichCustomizer.swift */,
+				A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */,
 			);
 			name = abstract_views;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 					A4B6866F1D7BB95A003F29D0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = JWDL6K3VXC;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -316,6 +320,7 @@
 				A45DA7061D83C20B0068A441 /* IkesTableViewCell.swift in Sources */,
 				A45DA70A1D83C2E00068A441 /* PCellStateChangedListener.swift in Sources */,
 				A47149191D7E394200138952 /* BreadMenu.swift in Sources */,
+				A49D99B81D90E453008EA161 /* PFoodComponentBoxFactory.swift in Sources */,
 				A4636D0C1D878E4F002D6C60 /* Hashing.swift in Sources */,
 				A45DA6FC1D837C5D0068A441 /* IkesOrderTable.swift in Sources */,
 			);
@@ -444,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilikeikesplace.Ike-s-Love-and-Sandwiches";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -458,6 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilikeikesplace.Ike-s-Love-and-Sandwiches";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

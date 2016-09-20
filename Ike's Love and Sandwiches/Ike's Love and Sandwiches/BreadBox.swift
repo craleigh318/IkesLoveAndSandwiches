@@ -6,47 +6,28 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-class BreadBox: FoodComponentBox {
-    override var detail: String? {
-        var d: String?
-        if let sb = selectedBread {
-            d = sb.name
-        } else {
-            d = nil
-        }
-        return d
+class BreadBox: PFoodComponentBoxFactory {
+    static let box = BreadBox()
+    
+    private static let thisInternalTitle = "Bread"
+    
+    func makeFoodComponentBox(sandwich: Sandwich) -> FoodComponentBox {
+        let thisTitle = Localization.localizeString(internalString: BreadBox.thisInternalTitle)
+        let thisBread = sandwich.bread
+        let thisBreadName = thisBread.name
+        let theseSelectables = getSelectableAddOns(thisBread)
+        let theseContents = selectableAddOnsToDataSource(selectableAddOns: theseSelectables)
+        return FoodComponentBox(title: thisTitle, detail: thisBreadName, contents: nil)
     }
     
-    var selectedBread: Bread? = BreadMenu.defaultBread
-    
-    private(set) var breads: [Bread] = BreadMenu.breads
-    
-    private let thisInternalTitle = "Bread"
-    
-    init() {
-        super.init(internalTitle: thisInternalTitle)
-    }
-    
-    override func getSelectableAddOns(sandwich: Sandwich) -> [SelectabeAddOn] {
-        var selAddOns = super.getSelectableAddOns(sandwich)
+    private func getSelectableAddOns(thisBread: Bread) -> [SelectabeAddOn] {
+        var selAddOns = [SelectabeAddOn]()
         let breadMenu = BreadMenu.breads
-        let thisBread = sa
         for b in breadMenu {
-            if b = sandwich. {
-                <#code#>
-            }
+            let hasBread = (b == thisBread)
+            let sao = SelectabeAddOn(addOn: b, selected: hasBread)
+            selAddOns.append(sao)
         }
-        return []
-    }
-    
-    
-    private static func submenuToBox(sub: AddOnsSubmenu) -> AddOnsBox {
-        let boxTitle = sub.name
-        var boxItems = [SelectableAddOn]()
-        for ao in sub.getAddOns() {
-            let sao = SelectableAddOn(addOn: ao)
-            boxItems.append(sao)
-        }
-        return AddOnsBox(internalTitle: boxTitle, addOns: boxItems)
+        return selAddOns
     }
 }
