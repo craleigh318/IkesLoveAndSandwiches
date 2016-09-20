@@ -7,5 +7,4 @@
 //
 
 class IkesSubTableMenu: InternalNameObject {
-    <#code#>
 }

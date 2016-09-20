@@ -16,7 +16,7 @@ class Localization {
     static func localizeOptionalString(internalString: String?) -> String? {
         var ret: String?
         if let intStr = internalString {
-            ret = localizeString(intStr)
+            ret = localizeString(internalString: intStr)
         } else {
             ret = nil
         }

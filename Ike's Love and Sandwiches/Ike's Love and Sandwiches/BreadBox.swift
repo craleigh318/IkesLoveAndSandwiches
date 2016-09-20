@@ -6,28 +6,28 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-class BreadBox: PFoodComponentBoxFactory {
+class BreadBox: FoodComponentBoxFactory {
     static let box = BreadBox()
     
     private static let thisInternalTitle = "Bread"
     
-    func makeFoodComponentBox(sandwich: Sandwich) -> FoodComponentBox {
-        let thisTitle = Localization.localizeString(internalString: BreadBox.thisInternalTitle)
-        let thisBread = sandwich.bread
-        let thisBreadName = thisBread.name
-        let theseSelectables = getSelectableAddOns(thisBread)
-        let theseContents = selectableAddOnsToDataSource(selectableAddOns: theseSelectables)
-        return FoodComponentBox(title: thisTitle, detail: thisBreadName, contents: nil)
+    private init() {
+        super.init(internalTitle: BreadBox.thisInternalTitle)
     }
     
-    private func getSelectableAddOns(thisBread: Bread) -> [SelectabeAddOn] {
-        var selAddOns = [SelectabeAddOn]()
+    override func getDetail(sandwich: Sandwich) -> String? {
+        return sandwich.bread.name
+    }
+    
+    override func getSelectableFoodItems(sandwich: Sandwich) -> [SelectableFoodItem] {
+        var selFoodItems = super.getSelectableFoodItems(sandwich: sandwich)
+        let thisBread = sandwich.bread
         let breadMenu = BreadMenu.breads
         for b in breadMenu {
             let hasBread = (b == thisBread)
-            let sao = SelectabeAddOn(addOn: b, selected: hasBread)
-            selAddOns.append(sao)
+            let sao = SelectableFoodItem(foodItem: b, selected: hasBread)
+            selFoodItems.append(sao)
         }
-        return selAddOns
+        return selFoodItems
     }
 }

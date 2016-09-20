@@ -10,7 +10,7 @@ class SandwichBase: FoodItem {
     var description: String? {
         var des: String?
         if let inDes = internalDescription {
-            des = Localization.localizeString(inDes)
+            des = Localization.localizeString(internalString: inDes)
         }
         return des
     }

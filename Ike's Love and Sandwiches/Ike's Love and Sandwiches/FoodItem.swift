@@ -20,7 +20,7 @@ class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow, Hashable {
     }
     
     func receiptPrintRow() -> IkesOrderRow {
-        let formattedPrice = IkesOrder.formatPrice(price)
+        let formattedPrice = IkesOrder.formatPrice(price: price)
         return IkesOrderRow(leftCell: name, rightCell: "\(formattedPrice)")
     }
     

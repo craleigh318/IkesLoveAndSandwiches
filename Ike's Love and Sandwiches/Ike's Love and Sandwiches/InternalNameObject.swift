@@ -8,7 +8,7 @@
 
 class InternalNameObject {
     var name: String {
-        return Localization.localizeString(internalName)
+        return Localization.localizeString(internalString: internalName)
     }
     
     private var internalName: String

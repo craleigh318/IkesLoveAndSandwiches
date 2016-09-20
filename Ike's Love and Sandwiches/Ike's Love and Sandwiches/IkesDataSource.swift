@@ -25,7 +25,7 @@ class IkesDataSource: NSObject, UITableViewDataSource {
         let sectionNumber = (indexPath as NSIndexPath).section
         let thisSection = sections[sectionNumber]
         let rowNumber = (indexPath as NSIndexPath).row
-        return thisSection.getRow(rowNumber)
+        return thisSection.getRow(index: rowNumber)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

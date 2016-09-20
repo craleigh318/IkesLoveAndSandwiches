@@ -14,7 +14,7 @@ class IkesOrder: PReceiptPrintable {
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "en_US")
         let priceInDollars = Double(price) / 100.0
-        return formatter.string(from: NSNumber(priceInDollars))
+        return formatter.string(from: NSNumber(value: priceInDollars))
     }
     
     var items: [PFoodItem] = []

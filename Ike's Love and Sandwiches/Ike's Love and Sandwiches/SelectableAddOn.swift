@@ -6,13 +6,11 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-class SelectableAddOn {
-    var selected: Bool
-    
+class SelectableAddOn: SelectableFoodItem {
     private(set) var addOn: AddOn
     
     init(addOn: AddOn, selected: Bool = false) {
         self.addOn = addOn
-        self.selected = selected
+        super.init(foodItem: addOn, selected: selected)
     }
 }
