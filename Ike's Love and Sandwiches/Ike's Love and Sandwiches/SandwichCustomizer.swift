@@ -21,9 +21,9 @@ class SandwichCustomizer {
     
     private(set) var boxes: [FoodComponentBox] = {
         var bxs = [FoodComponentBox]()
-        bxs.append(BreadBox())
+        bxs.append(BreadBox.box)
         for sub in AddOnsMenu.submenus {
-            let newBox = SandwichCustomizer.submenuToBox(sub)
+            let newBox = SandwichCustomizer.submenuToBox(sub: sub)
             bxs.append(newBox)
         }
         return bxs
