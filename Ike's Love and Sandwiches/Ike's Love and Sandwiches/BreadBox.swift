@@ -24,6 +24,29 @@ class BreadBox: FoodComponentBox {
     private let thisInternalTitle = "Bread"
     
     init() {
-        super.init(internalTitle: thisInternalTitle, contents: nil)
+        super.init(internalTitle: thisInternalTitle)
+    }
+    
+    override func getSelectableAddOns(sandwich: Sandwich) -> [SelectabeAddOn] {
+        var selAddOns = super.getSelectableAddOns(sandwich)
+        let breadMenu = BreadMenu.breads
+        let thisBread = sa
+        for b in breadMenu {
+            if b = sandwich. {
+                <#code#>
+            }
+        }
+        return []
+    }
+    
+    
+    private static func submenuToBox(sub: AddOnsSubmenu) -> AddOnsBox {
+        let boxTitle = sub.name
+        var boxItems = [SelectableAddOn]()
+        for ao in sub.getAddOns() {
+            let sao = SelectableAddOn(addOn: ao)
+            boxItems.append(sao)
+        }
+        return AddOnsBox(internalTitle: boxTitle, addOns: boxItems)
     }
 }
