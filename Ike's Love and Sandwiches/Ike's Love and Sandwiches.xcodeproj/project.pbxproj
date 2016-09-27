@@ -13,6 +13,9 @@
 		A40CB0721D8A1F3F00530153 /* FoodComponentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CB0711D8A1F3F00530153 /* FoodComponentBox.swift */; };
 		A40CB0741D8A381400530153 /* BreadBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CB0731D8A381400530153 /* BreadBox.swift */; };
 		A40CB0781D8A3D1A00530153 /* SandwichCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CB0771D8A3D1A00530153 /* SandwichCustomizer.swift */; };
+		A43F3C171D99F9AE001CC885 /* CellToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F3C161D99F9AE001CC885 /* CellToView.swift */; };
+		A43F3C191D99F9D8001CC885 /* PActiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F3C181D99F9D8001CC885 /* PActiveCell.swift */; };
+		A43F3C1B1D99FB39001CC885 /* ActiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F3C1A1D99FB39001CC885 /* ActiveCell.swift */; };
 		A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */; };
 		A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */; };
 		A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */; };
@@ -53,6 +56,9 @@
 		A40CB0711D8A1F3F00530153 /* FoodComponentBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodComponentBox.swift; sourceTree = "<group>"; };
 		A40CB0731D8A381400530153 /* BreadBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadBox.swift; sourceTree = "<group>"; };
 		A40CB0771D8A3D1A00530153 /* SandwichCustomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandwichCustomizer.swift; sourceTree = "<group>"; };
+		A43F3C161D99F9AE001CC885 /* CellToView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellToView.swift; sourceTree = "<group>"; };
+		A43F3C181D99F9D8001CC885 /* PActiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PActiveCell.swift; sourceTree = "<group>"; };
+		A43F3C1A1D99FB39001CC885 /* ActiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCell.swift; sourceTree = "<group>"; };
 		A4504DD81D7D1C9A00AD4F27 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		A4504DDA1D7D278300AD4F27 /* SandwichBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandwichBase.swift; sourceTree = "<group>"; };
 		A4504DDE1D7D329A00AD4F27 /* AddOnsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnsMenu.swift; sourceTree = "<group>"; };
@@ -102,6 +108,25 @@
 		A40CB0641D8A072600530153 /* abstract_views */ = {
 			isa = PBXGroup;
 			children = (
+				A43F3C151D99F994001CC885 /* navigation_menus */,
+				A43F3C1C1D9A0E0A001CC885 /* sandwich_customization */,
+			);
+			name = abstract_views;
+			sourceTree = "<group>";
+		};
+		A43F3C151D99F994001CC885 /* navigation_menus */ = {
+			isa = PBXGroup;
+			children = (
+				A43F3C161D99F9AE001CC885 /* CellToView.swift */,
+				A43F3C181D99F9D8001CC885 /* PActiveCell.swift */,
+				A43F3C1A1D99FB39001CC885 /* ActiveCell.swift */,
+			);
+			name = navigation_menus;
+			sourceTree = "<group>";
+		};
+		A43F3C1C1D9A0E0A001CC885 /* sandwich_customization */ = {
+			isa = PBXGroup;
+			children = (
 				A49D99B91D90F862008EA161 /* SelectableFoodItem.swift */,
 				A40CB0651D8A074100530153 /* SelectableAddOn.swift */,
 				A40CB06F1D8A177D00530153 /* AddOnsBox.swift */,
@@ -111,7 +136,7 @@
 				A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */,
 				A49D99BB1D90FCA2008EA161 /* FoodComponentBoxFactory.swift */,
 			);
-			name = abstract_views;
+			name = sandwich_customization;
 			sourceTree = "<group>";
 		};
 		A45DA7011D8397410068A441 /* helper_classes */ = {
@@ -297,6 +322,7 @@
 				A40CB0631D89FAE700530153 /* IkesSubTableMenu.swift in Sources */,
 				A4D901501D8107A700CB98E8 /* InternalNameObject.swift in Sources */,
 				A4504DDB1D7D278300AD4F27 /* SandwichBase.swift in Sources */,
+				A43F3C1B1D99FB39001CC885 /* ActiveCell.swift in Sources */,
 				A4B440261D7CC640008340A7 /* AddOn.swift in Sources */,
 				A4B686761D7BB95A003F29D0 /* ViewController.swift in Sources */,
 				A4504DDF1D7D329A00AD4F27 /* AddOnsMenu.swift in Sources */,
@@ -305,6 +331,7 @@
 				A45DA7081D83C2A10068A441 /* PCellSelectListener.swift in Sources */,
 				A4B686741D7BB95A003F29D0 /* AppDelegate.swift in Sources */,
 				A4504DD91D7D1C9A00AD4F27 /* FoodItem.swift in Sources */,
+				A43F3C171D99F9AE001CC885 /* CellToView.swift in Sources */,
 				A40CB0741D8A381400530153 /* BreadBox.swift in Sources */,
 				A45DA7001D83920C0068A441 /* SandwichesMenu.swift in Sources */,
 				A47149161D7E380F00138952 /* Bread.swift in Sources */,
@@ -312,6 +339,7 @@
 				A49D99BC1D90FCA2008EA161 /* FoodComponentBoxFactory.swift in Sources */,
 				A40CB0721D8A1F3F00530153 /* FoodComponentBox.swift in Sources */,
 				A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */,
+				A43F3C191D99F9D8001CC885 /* PActiveCell.swift in Sources */,
 				A4D9014E1D8106CE00CB98E8 /* AddOnsSubmenu.swift in Sources */,
 				A40CB0701D8A177D00530153 /* AddOnsBox.swift in Sources */,
 				A45DA6FA1D8379940068A441 /* IkesOrderRow.swift in Sources */,

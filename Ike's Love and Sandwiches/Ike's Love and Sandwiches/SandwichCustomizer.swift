@@ -19,6 +19,7 @@ class SandwichCustomizer {
     
     init(baseSandwich: SandwichBase) {
         sandwich = Sandwich(base: baseSandwich)
+        initializeBoxes()
     }
     
     private func initializeBoxes() {
