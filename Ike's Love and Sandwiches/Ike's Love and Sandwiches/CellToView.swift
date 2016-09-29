@@ -9,6 +9,13 @@
 import UIKit
 
 class CellToView: ActiveCell {
+    static func createCell(
+        text: String? = nil, detailText: String? = nil) -> UITableViewCell {
+        return ActiveCell.createCell(
+            text: text, detailText: detailText,
+            accessory: UITableViewCellAccessoryType.disclosureIndicator)
+    }
+    
     private var viewController: UIViewController?
     
     private weak var navigationController: UINavigationController?
@@ -20,12 +27,17 @@ class CellToView: ActiveCell {
         super.init(cell: cell)
     }
     
+    convenience init(
+        text: String? = nil, detailText: String? = nil, viewController: UIViewController? = nil,
+        navigationController: UINavigationController? = nil) {
+        let newCell = CellToView.createCell(text: text, detailText: detailText)
+        self.init(cell: newCell, viewController: viewController, navigationController: navigationController)
+    }
+    
     override func selectCell() {
         super.selectCell()
-        if let nc = navigationController {
-            if let vc = viewController {
-                nc.pushViewController(vc, animated: true)
-            }
+        if let vc = viewController {
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

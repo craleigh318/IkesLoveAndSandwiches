@@ -9,6 +9,16 @@
 import UIKit
 
 class ActiveCell: PActiveCell {
+    static func createCell(
+        text: String? = nil, detailText: String? = nil,
+        accessory: UITableViewCellAccessoryType = UITableViewCellAccessoryType.none) -> UITableViewCell {
+        let newCell = UITableViewCell()
+        newCell.textLabel?.text = text
+        newCell.detailTextLabel?.text = text
+        newCell.accessoryType = accessory
+        return newCell
+    }
+    
     private(set) var cell: UITableViewCell
     
     init(cell: UITableViewCell) {
