@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IkesDataSource: NSObject, UITableViewDataSource {
+class IkesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     private var sections: [IkesTableSection]
     
     init(sections: [IkesTableSection]) {
@@ -22,10 +22,8 @@ class IkesDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionNumber = (indexPath as NSIndexPath).section
-        let thisSection = sections[sectionNumber]
-        let rowNumber = (indexPath as NSIndexPath).row
-        return thisSection.getRow(index: rowNumber)
+        let thisCell = getActiveCell(indexPath: indexPath)
+        return thisCell.cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,5 +33,17 @@ class IkesDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let thisSection = sections[section]
         return thisSection.name
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let thisCell = getActiveCell(indexPath: indexPath)
+        thisCell.selectCell()
+    }
+    
+    func getActiveCell(indexPath: IndexPath) -> PActiveCell {
+        let sectionNumber = indexPath.section
+        let thisSection = sections[sectionNumber]
+        let rowNumber = indexPath.row
+        return thisSection.getRow(index: rowNumber)
     }
 }

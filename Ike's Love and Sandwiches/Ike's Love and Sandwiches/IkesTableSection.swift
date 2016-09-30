@@ -15,9 +15,9 @@ class IkesTableSection {
     
     private var internalName: String?
     
-    private var rows: [UITableViewCell]
+    private var rows: [PActiveCell]
     
-    init (internalName: String, rows: [UITableViewCell]) {
+    init (internalName: String, rows: [PActiveCell]) {
         self.internalName = internalName
         self.rows = rows
     }
@@ -26,7 +26,7 @@ class IkesTableSection {
         return rows.count
     }
     
-    func getRow(index: Int) -> UITableViewCell {
+    func getRow(index: Int) -> PActiveCell {
         return rows[index]
     }
 }
