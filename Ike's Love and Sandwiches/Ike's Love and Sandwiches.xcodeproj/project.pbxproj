@@ -38,6 +38,7 @@
 		A49D99B81D90E453008EA161 /* PFoodComponentBoxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */; };
 		A49D99BA1D90F862008EA161 /* SelectableFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D99B91D90F862008EA161 /* SelectableFoodItem.swift */; };
 		A49D99BC1D90FCA2008EA161 /* FoodComponentBoxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D99BB1D90FCA2008EA161 /* FoodComponentBoxFactory.swift */; };
+		A4AEDC5D1DA23D80000DDE20 /* IkesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEDC5C1DA23D80000DDE20 /* IkesTableView.swift */; };
 		A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440211D7CC383008340A7 /* PFoodItem.swift */; };
 		A4B440261D7CC640008340A7 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440251D7CC640008340A7 /* AddOn.swift */; };
 		A4B440291D7CCDE5008340A7 /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B440281D7CCDE5008340A7 /* Sandwich.swift */; };
@@ -47,7 +48,6 @@
 		A4B6867B1D7BB95A003F29D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B6867A1D7BB95A003F29D0 /* Assets.xcassets */; };
 		A4B6867E1D7BB95A003F29D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B6867C1D7BB95A003F29D0 /* LaunchScreen.storyboard */; };
 		A4B77D0F1D89018E007C9293 /* IkesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B77D0E1D89018E007C9293 /* IkesDataSource.swift */; };
-		A4C81A7B1D9F36C600DD03AF /* IkesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C81A7A1D9F36C600DD03AF /* IkesTableViewController.swift */; };
 		A4D9014E1D8106CE00CB98E8 /* AddOnsSubmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9014D1D8106CE00CB98E8 /* AddOnsSubmenu.swift */; };
 		A4D901501D8107A700CB98E8 /* InternalNameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9014F1D8107A700CB98E8 /* InternalNameObject.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +84,7 @@
 		A49D99B71D90E453008EA161 /* PFoodComponentBoxFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodComponentBoxFactory.swift; sourceTree = "<group>"; };
 		A49D99B91D90F862008EA161 /* SelectableFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableFoodItem.swift; sourceTree = "<group>"; };
 		A49D99BB1D90FCA2008EA161 /* FoodComponentBoxFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodComponentBoxFactory.swift; sourceTree = "<group>"; };
+		A4AEDC5C1DA23D80000DDE20 /* IkesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesTableView.swift; sourceTree = "<group>"; };
 		A4B440211D7CC383008340A7 /* PFoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFoodItem.swift; sourceTree = "<group>"; };
 		A4B440251D7CC640008340A7 /* AddOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		A4B440281D7CCDE5008340A7 /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		A4B6867D1D7BB95A003F29D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B6867F1D7BB95A003F29D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B77D0E1D89018E007C9293 /* IkesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesDataSource.swift; sourceTree = "<group>"; };
-		A4C81A7A1D9F36C600DD03AF /* IkesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IkesTableViewController.swift; sourceTree = "<group>"; };
 		A4D9014D1D8106CE00CB98E8 /* AddOnsSubmenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnsSubmenu.swift; sourceTree = "<group>"; };
 		A4D9014F1D8107A700CB98E8 /* InternalNameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalNameObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +137,7 @@
 				A4B77D0E1D89018E007C9293 /* IkesDataSource.swift */,
 				A4636D0D1D879E1F002D6C60 /* IkesTableSection.swift */,
 				A43F3C181D99F9D8001CC885 /* PActiveCell.swift */,
-				A4C81A7A1D9F36C600DD03AF /* IkesTableViewController.swift */,
+				A4AEDC5C1DA23D80000DDE20 /* IkesTableView.swift */,
 			);
 			name = navigation_menus;
 			sourceTree = "<group>";
@@ -354,9 +354,9 @@
 				A47149161D7E380F00138952 /* Bread.swift in Sources */,
 				A40CB0661D8A074100530153 /* SelectableAddOn.swift in Sources */,
 				A49D99BC1D90FCA2008EA161 /* FoodComponentBoxFactory.swift in Sources */,
+				A4AEDC5D1DA23D80000DDE20 /* IkesTableView.swift in Sources */,
 				A40CB0721D8A1F3F00530153 /* FoodComponentBox.swift in Sources */,
 				A4B440221D7CC383008340A7 /* PFoodItem.swift in Sources */,
-				A4C81A7B1D9F36C600DD03AF /* IkesTableViewController.swift in Sources */,
 				A43F3C191D99F9D8001CC885 /* PActiveCell.swift in Sources */,
 				A41B5BEA1DA1F5F60054E9E9 /* ReceiptView.swift in Sources */,
 				A4D9014E1D8106CE00CB98E8 /* AddOnsSubmenu.swift in Sources */,

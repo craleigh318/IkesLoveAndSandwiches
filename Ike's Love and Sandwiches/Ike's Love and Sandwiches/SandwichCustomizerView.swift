@@ -6,7 +6,13 @@
 //  Copyright © 2016 Ike's Place. All rights reserved.
 //
 
-class SandwichCustomizerView: IkesTableViewController {
+import UIKit
+
+class SandwichCustomizerView: UITableViewController {
+    private var ikesTableView: IkesTableView? {
+        return tableView as? IkesTableView
+    }
+    
     private func componentBoxToActiveCell(box: FoodComponentBox) -> PActiveCell {
         let boxName = box.title
         let newCell = CellToView.createCell(text: boxName)
@@ -37,9 +43,11 @@ class SandwichCustomizerView: IkesTableViewController {
     }
     
     func setCustomizer(customizer: SandwichCustomizer) {
-        let sandwichSection = makeSandwichSection(customizer: customizer)
-        let customizationSection = makeCustomizationSection(customizer: customizer)
-        let newDataSource = IkesDataSource(sections: [sandwichSection, customizationSection])
-        setDataSourceAndDelegate(dSource: newDataSource)
+        if let itv = ikesTableView {
+            let sandwichSection = makeSandwichSection(customizer: customizer)
+            let customizationSection = makeCustomizationSection(customizer: customizer)
+            let newDataSource = IkesDataSource(sections: [sandwichSection, customizationSection])
+            itv.setDataSourceAndDelegate(dSource: newDataSource)
+        }
     }
 }
