@@ -17,7 +17,7 @@ class IkesTableSection {
     
     private var rows: [PActiveCell]
     
-    init (internalName: String, rows: [PActiveCell]) {
+    init (internalName: String?, rows: [PActiveCell]) {
         self.internalName = internalName
         self.rows = rows
     }

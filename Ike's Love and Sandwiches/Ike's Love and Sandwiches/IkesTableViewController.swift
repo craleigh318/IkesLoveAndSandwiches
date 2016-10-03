@@ -12,5 +12,6 @@ class IkesTableViewController: UITableViewController {
     func setDataSourceAndDelegate(dSource: IkesDataSource) {
         tableView.dataSource = dSource
         tableView.delegate = dSource
+        tableView.reloadData()
     }
 }
