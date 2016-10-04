@@ -9,7 +9,11 @@
 import UIKit
 
 class IkesTableView: UITableView {
+    
+    private(set) var ikesdataSource: IkesDataSource?
+    
     func setDataSourceAndDelegate(dSource: IkesDataSource) {
+        ikesdataSource = dSource
         dataSource = dSource
         delegate = dSource
         reloadData()
