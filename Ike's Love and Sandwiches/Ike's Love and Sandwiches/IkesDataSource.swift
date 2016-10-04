@@ -38,6 +38,7 @@ class IkesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thisCell = getActiveCell(indexPath: indexPath)
         thisCell.selectCell()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func getActiveCell(indexPath: IndexPath) -> PActiveCell {
