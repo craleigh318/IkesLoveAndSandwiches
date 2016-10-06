@@ -9,12 +9,17 @@
 import UIKit
 
 class ReceiptView {
-    static func orderRowToCells(row: IkesOrderRow) -> [UITableViewCell] {
+    static func orderRowToCell(row: IkesOrderRow) -> UITableViewCell {
         let text = row.leftCell
         let detail = row.rightCell
-        let cellOne = UITableViewCell()
+        let cellOne = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: nil)
         cellOne.textLabel?.text = text
         cellOne.detailTextLabel?.text = detail
+        return cellOne
+    }
+    
+    static func orderRowToCells(row: IkesOrderRow) -> [UITableViewCell] {
+        let cellOne = orderRowToCell(row: row)
         var cells = [cellOne]
         if let bottomText = row.bottomCell {
             let cellTwo = UITableViewCell()
