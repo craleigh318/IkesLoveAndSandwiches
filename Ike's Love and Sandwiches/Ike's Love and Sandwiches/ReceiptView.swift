@@ -13,6 +13,7 @@ class ReceiptView {
         let text = row.leftCell
         let detail = row.rightCell
         let cellOne = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: nil)
+        cellOne.selectionStyle = UITableViewCellSelectionStyle.none
         cellOne.textLabel?.text = text
         cellOne.detailTextLabel?.text = detail
         return cellOne
