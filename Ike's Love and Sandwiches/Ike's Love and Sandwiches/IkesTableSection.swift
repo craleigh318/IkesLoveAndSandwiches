@@ -13,13 +13,20 @@ class IkesTableSection {
         return Localization.localizeOptionalString(internalString: internalName)
     }
     
+    var footer: String? {
+        return Localization.localizeOptionalString(internalString: internalFooter)
+    }
+    
     private var internalName: String?
     
     private var rows: [PActiveCell]
     
-    init (internalName: String?, rows: [PActiveCell]) {
+    private var internalFooter: String?
+    
+    init (internalName: String? = nil, rows: [PActiveCell], internalFooter: String? = nil) {
         self.internalName = internalName
         self.rows = rows
+        self.internalFooter = internalFooter
     }
     
     func getNumRows() -> Int {

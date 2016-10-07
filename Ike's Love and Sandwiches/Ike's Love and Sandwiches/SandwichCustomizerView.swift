@@ -22,13 +22,8 @@ class SandwichCustomizerView: UITableViewController {
     private func makeSandwichSection(customizer: SandwichCustomizer) -> IkesTableSection {
         let title = "Sandwich"
         let contents = customizer.sandwich.base.receiptPrintRow()
-        let cells = ReceiptView.orderRowToCells(row: contents)
-        var activeCells = [PActiveCell]()
-        for c in cells {
-            let ac = ActiveCell(cell: c)
-            activeCells.append(ac)
-        }
-        return IkesTableSection(internalName: title, rows: activeCells)
+        let section = ReceiptView.orderRowToSection(internalName: title, row: contents)
+        return section
     }
     
     private func makeCustomizationSection(customizer: SandwichCustomizer) -> IkesTableSection {

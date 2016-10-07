@@ -35,6 +35,11 @@ class IkesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         return thisSection.name
     }
     
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        let thisSection = sections[section]
+        return thisSection.footer
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thisCell = getActiveCell(indexPath: indexPath)
         thisCell.selectCell()
