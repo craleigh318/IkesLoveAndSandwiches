@@ -21,7 +21,13 @@ class FoodItem: InternalNameObject, PFoodItem, PReceiptPrintableRow, Hashable {
     
     func receiptPrintRow() -> IkesOrderRow {
         let formattedPrice = IkesOrder.formatPrice(price: price)
-        return IkesOrderRow(leftCell: name, rightCell: "\(formattedPrice)")
+        var rightText: String
+        if let fp = formattedPrice {
+            rightText = fp
+        } else {
+            rightText = ""
+        }
+        return IkesOrderRow(leftCell: name, rightCell: rightText)
     }
     
     func receiptPrint() -> IkesOrderTable {
